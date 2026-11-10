@@ -15,8 +15,7 @@ export default function Header() {
                 <stop offset="1" stopColor="#3B82F6" />
               </linearGradient>
             </defs>
-            <path d="M3 22V4l10 11V4h4v18L7 11v11H3Z" fill="url(#logo-g)" />
-            <rect x="19" y="4" width="4" height="18" rx="1" fill="url(#logo-g)" opacity="0.55" />
+            <path d="M2 4h6l5 11 5-11h6l-8.5 18h-5Z" fill="url(#logo-g)" />
           </svg>
           <span className="font-display text-lg font-bold tracking-[0.14em] text-white">{brand.name}</span>
         </Link>

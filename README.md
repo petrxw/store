@@ -1,4 +1,4 @@
-# NEXORA store (stage 1)
+# PirateVault store (stage 1)
 
 Next.js 15, TypeScript, Tailwind, Supabase, Stripe, Resend. Change the brand name in `src/config/brand.ts` and colors in `tailwind.config.ts`.
 

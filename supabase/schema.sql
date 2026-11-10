@@ -1,4 +1,4 @@
--- NEXORA database schema. Run once in the Supabase SQL editor.
+-- PirateVault database schema. Run once in the Supabase SQL editor.
 -- Money is stored as numeric(10,2). Codes are stored encrypted. Only the service role can touch inventory and orders.
 
 create extension if not exists pgcrypto;

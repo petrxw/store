@@ -1,5 +1,5 @@
 /* Change the store name, currency and contact details here. Everything else reads from this file. */
-const name = "NEXORA";
+const name = "PirateVault";
 
 export const brand = {
   name,
