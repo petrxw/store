@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #09090d;
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink font-sans text-zinc-300 antialiased;
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-white;
+    text-wrap: balance;
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-volt-soft;
+  }
+  ::selection {
+    background: rgba(139, 92, 246, 0.45);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-4 sm:px-6;
+  }
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg px-5 text-sm font-semibold transition duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-brand-gradient text-white shadow-[0_8px_30px_-10px_rgba(99,102,241,0.7)] hover:brightness-110;
+  }
+  .btn-gold {
+    @apply bg-gold-gradient text-[#1b1405] shadow-[0_8px_30px_-10px_rgba(217,176,76,0.6)] hover:brightness-105;
+  }
+  .btn-ghost {
+    @apply border border-line bg-transparent text-zinc-200 hover:border-zinc-500 hover:bg-white/5;
+  }
+  .card {
+    @apply rounded-xl border border-line bg-surface;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-violet-soft;
+  }
+  .input {
+    @apply min-h-[44px] w-full rounded-lg border border-line bg-raised px-3 text-sm text-white placeholder:text-zinc-500 focus:border-volt focus:outline-none;
+  }
+  .section {
+    @apply py-14 sm:py-20;
+  }
+}
+
+/* Hero backdrop: soft color wash and a faded grid. Decorative only. */
+.hero-backdrop {
+  background:
+    radial-gradient(60% 50% at 15% 0%, rgba(139, 92, 246, 0.22), transparent 70%),
+    radial-gradient(50% 45% at 90% 10%, rgba(59, 130, 246, 0.16), transparent 70%);
+}
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+}
